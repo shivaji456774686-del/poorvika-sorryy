@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Poorvika 💗</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; display: grid; place-items: center;
+    padding: 22px; font-family: system-ui, -apple-system, Segoe UI, sans-serif;
+    background: linear-gradient(135deg, #ffe1ec, #f4e6ff, #fff0dc);
+    color: #553747; overflow-x: hidden;
+  }
+  .card {
+    width: min(100%, 480px); padding: 34px 25px; text-align: center;
+    background: rgba(255,255,255,.82); border: 1px solid #fff;
+    border-radius: 28px; box-shadow: 0 18px 55px rgba(130,70,110,.16);
+    animation: pop .7s ease both;
+  }
+  @keyframes pop { from { opacity: 0; transform: translateY(18px) scale(.97); } to { opacity: 1; transform: none; } }
+  .heart { font-size: 52px; animation: beat 1.2s infinite; }
+  @keyframes beat { 50% { transform: scale(1.13); } }
+  h1 { margin: 10px 0; font-size: clamp(30px, 8vw, 42px); color: #c34f83; }
+  .subtitle { color: #9a6b83; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; }
+  p { line-height: 1.75; font-size: 16px; }
+  .note { background: #fff2f7; border-radius: 18px; padding: 17px; margin: 22px 0; }
+  button {
+    border: 0; border-radius: 999px; padding: 13px 23px; margin: 7px;
+    font-size: 15px; font-weight: 700; cursor: pointer; transition: transform .2s;
+  }
+  button:hover { transform: translateY(-2px); }
+  .yes { background: #d85d91; color: white; box-shadow: 0 7px 18px #d85d9140; }
+  .later { background: #f3e7ee; color: #80566d; }
+  #reply { min-height: 30px; color: #c34f83; font-weight: 700; margin-top: 15px; }
+  footer { margin-top: 24px; font-size: 12px; color: #aa8b9b; }
+</style>
+</head>
+<body>
+  <main class="card">
+    <div class="heart">💗</div>
+    <div class="subtitle">A little message for you</div>
+    <h1>I'm Sorry, Poorvika</h1>
+    <p>I know you’re upset with me, and I’m genuinely sorry if I hurt you.</p>
+    <div class="note">
+      <p>I never wanted to make you feel bad. You matter to me, and our friendship matters too. I’ll try to understand your feelings better and not repeat what upset you.</p>
+      <p><strong>No pressure to forgive me right away.</strong> I just wanted you to know that I’m sorry. 🥺</p>
+    </div>
+    <p>Can we talk when you feel ready?</p>
+    <button class="yes" onclick="document.getElementById('reply').textContent='THANK YOU 💗 I promise I’ll listen.'">Okay, let's talk 💞</button>
+    <button class="later" onclick="document.getElementById('reply').textContent='That’s okay. Take your time. 🌷'">I need some time</button>
+    <div id="reply" aria-live="polite"></div>
+    <footer>Made with care, just for Poorvika ✨</footer>
+  </main>
+</body>
+</html>
